@@ -19,7 +19,13 @@
 
 }
 
-img.avatar,
+img.avatar{
+       z-index: 1000;
+    position: static;
+    max-width: 213px;
+    margin: 22px 41px;
+    backdrop-filter: blur(5px);
+}
 img.progress {
     z-index: 1000;
     position: static;
