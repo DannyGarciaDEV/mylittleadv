@@ -83,6 +83,36 @@ const five = L.icon({
     iconAnchor: [16, 32],
     
 });
+const six = L.icon({
+    iconUrl: 'https://pngimg.com/d/treasure_chest_PNG94.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    
+});
+const seven = L.icon({
+    iconUrl: 'https://pngimg.com/d/treasure_chest_PNG94.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    
+});
+const eigth = L.icon({
+    iconUrl: 'https://pngimg.com/d/treasure_chest_PNG94.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    
+});
+const nine = L.icon({
+    iconUrl: 'https://pngimg.com/d/treasure_chest_PNG94.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    
+});
+const ten = L.icon({
+    iconUrl: 'https://pngimg.com/d/treasure_chest_PNG94.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    
+});
 function getLocation() {
     if (navigator.permissions) {
         navigator.permissions.query({ name: 'geolocation' }).then(function (permissionStatus) {
@@ -135,6 +165,11 @@ function showPosition(position) {
     wentworthThree = L.marker([42.3363249, -71.0966343,18], { icon: three }).addTo(map);
     wentworthFour = L.marker([42.3368235, -71.0942226,21], { icon: four }).addTo(map);
     wentworthFiver = L.marker([42.3366479, -71.0949202,21], { icon: five }).addTo(map);
+    cityHall = L.marker([42.3602, -71.0588], { icon: six }).addTo(map);
+    paulRevereH = L.marker([42.3634, -71.0537], { icon: seven }).addTo(map);
+    northEnd = L.marker([42.3680, -71.0551], { icon: eigth }).addTo(map);
+    unionOysterH = L.marker([ 42.3614,  -71.0566], { icon: nine }).addTo(map);
+    maassStateH = L.marker([  42.3595,  -71.0621], { icon: ten }).addTo(map);
 
 
 function handleLocationError(error) {
