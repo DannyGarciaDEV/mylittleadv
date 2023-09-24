@@ -5,8 +5,8 @@
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
+    /*max-width: 400px; */
+    margin:0 !important;
     padding: 10px;
 }
 
@@ -16,11 +16,15 @@
     align-items: center;
     width: 100%;
     margin-bottom: 10px; /* Add space between top and bottom sections */
+
 }
 
 img.avatar,
 img.progress {
-    max-width: 100px; /* Adjust the size of the avatar and progress images */
+    z-index: 1000;
+    position: static;
+    max-width: 101px;
+    margin: 4px 39px
 }
 
 .bottom-section {
@@ -35,9 +39,9 @@ img.progress {
     border-radius: 5px;
 }
 
-/* Media query for adjusting styles on larger screens (e.g., tablets and desktops) */
-@media (min-width: 768px) {
+/*
+} @media (min-width: 768px) {
     .container {
-        max-width: 600px; /* Adjust the maximum width for larger screens */
+        max-width: 600px; 
     }
-}
+} */
