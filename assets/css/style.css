@@ -30,7 +30,7 @@ img.progress {
 /* Map styles */
 #map {
     height: 600px; /* Adjust the map's height as needed */
-    width: 100%;
+    width: 97%;
     border: 1px solid #000; /* Add a border for clarity */
     border-radius: 5px;
 }
