@@ -71,6 +71,18 @@ const three = L.icon({
     iconAnchor: [16, 32],
     
 });
+const four = L.icon({
+    iconUrl: 'https://media.istockphoto.com/id/157531255/photo/grungy-betsy-ross-flag-with-thirteen-stars-and-stripes.jpg?s=612x612&w=0&k=20&c=-Z203D84hHgP051pQOlSgQsQ_WGuP4k835VVl22IqEg=',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    
+});
+const five = L.icon({
+    iconUrl: 'https://pngimg.com/d/teat_bag_PNG15.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    
+});
 function getLocation() {
     if (navigator.permissions) {
         navigator.permissions.query({ name: 'geolocation' }).then(function (permissionStatus) {
@@ -114,13 +126,15 @@ function showPosition(position) {
 
     userMarker2 = L.marker([42.3361039, -71.094635], { icon: chestIcon }).addTo(map);
 
-    eggR = L.marker([42.3361713, -71.0970063], { icon: egg }).addTo(map);
+    eggR = L.marker([42.3360885, -71.0954584,21], { icon: egg }).addTo(map);
     citgoSign = L.marker([42.3492582, -71.0962487], { icon: citgo }).addTo(map);
     redSox = L.marker([42.346268, -71.095764], { icon: redSoxs }).addTo(map);
     bostonTea = L.marker([42.3522, -71.0513], { icon: ship }).addTo(map);
-    wentworthOne = L.marker([42.3361703, -71.0974014,17], { icon: one }).addTo(map);
+    wentworthOne = L.marker([42.3364348, -71.0952346,21], { icon: one }).addTo(map);
     wentworthTwo = L.marker([42.3368404, -71.0956942,20], { icon: two}).addTo(map);
     wentworthThree = L.marker([42.3363249, -71.0966343,18], { icon: three }).addTo(map);
+    wentworthFour = L.marker([42.3368235, -71.0942226,21], { icon: four }).addTo(map);
+    wentworthFiver = L.marker([42.3366479, -71.0949202,21], { icon: five }).addTo(map);
 
 
 function handleLocationError(error) {
