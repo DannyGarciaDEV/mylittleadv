@@ -76,10 +76,10 @@ function getLocation() {
         navigator.permissions.query({ name: 'geolocation' }).then(function (permissionStatus) {
             if (permissionStatus.state === 'granted') {
                 // Permission has already been granted
-                navigator.geolocation.getCurrentPosition(showPosition, handleLocationError);
+                navigator.geolocation.watchPosition(showPosition, handleLocationError);
             } else if (permissionStatus.state === 'prompt') {
                 // Permission has not been granted yet; request it
-                navigator.geolocation.getCurrentPosition(showPosition, handleLocationError);
+                navigator.geolocation.watchPosition(showPosition, handleLocationError);
             } else {
                 // Permission denied
                 document.getElementById("location").innerHTML = "Geolocation permission denied.";
@@ -87,11 +87,13 @@ function getLocation() {
         });
     } else if (navigator.geolocation) {
         // Fallback for browsers that do not support the Permissions API
-        navigator.geolocation.getCurrentPosition(showPosition, handleLocationError);
+        navigator.geolocation.watchPosition(showPosition, handleLocationError);
     } else {
         document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
     }
+    console.log("works!")
 }
+
 
 function showPosition(position) {
     const latitude = position.coords.latitude;
@@ -106,6 +108,8 @@ function showPosition(position) {
     userMarker = L.marker([latitude, longitude], { icon: userIcon }).addTo(map);
 
     userMarker.bindPopup("This is you").openPopup();
+    console.log('positon Works')
+}
    
 
     userMarker2 = L.marker([42.3361039, -71.094635], { icon: chestIcon }).addTo(map);
@@ -117,12 +121,12 @@ function showPosition(position) {
     wentworthOne = L.marker([42.3361703, -71.0974014,17], { icon: one }).addTo(map);
     wentworthTwo = L.marker([42.3368404, -71.0956942,20], { icon: two}).addTo(map);
     wentworthThree = L.marker([42.3363249, -71.0966343,18], { icon: three }).addTo(map);
-}
+
 
 function handleLocationError(error) {
     document.getElementById("location").innerHTML = "Error: " + error.message;
 }
 
 // Get location once without asking multiple times
-getLocation();
 
+getLocation()
