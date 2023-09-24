@@ -34,6 +34,16 @@ img.progress {
     backdrop-filter: blur(5px);
 }
 
+img.logo {
+    z-index: 2000;
+    position: fixed;
+    max-width: 90px;
+    margin: 20px 10px;
+    backdrop-filter: blur(5px);
+    bottom: 0;
+    right: 0;
+}
+
 .bottom-section {
     width: 100%;
 }
