@@ -1,0 +1,25 @@
+#map {
+    height: 70vh; /* Set initial height, adjust as needed */
+    width: 100%;
+    margin-bottom: 20px; /* Add space below the map */
+}
+
+
+
+.venture-info img {
+    max-width: 91%;
+    height: auto;
+    max-height: 147px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.video-container {
+    text-align: center;
+    margin-top: 20px;
+}
