@@ -52,7 +52,25 @@ const ship = L.icon({
     iconAnchor: [16, 32],
     
 });
+const one = L.icon({
+    iconUrl: 'https://clipart-library.com/img1/936576.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    
+});
 
+const two = L.icon({
+    iconUrl: 'https://brookersicecream.com/wp-content/uploads/2018/08/Paul-Revere.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    
+});
+const three = L.icon({
+    iconUrl: 'https://cdn-icons-png.flaticon.com/512/6887/6887040.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    
+});
 function getLocation() {
     if (navigator.permissions) {
         navigator.permissions.query({ name: 'geolocation' }).then(function (permissionStatus) {
@@ -96,6 +114,9 @@ function showPosition(position) {
     citgoSign = L.marker([42.3492582, -71.0962487], { icon: citgo }).addTo(map);
     redSox = L.marker([42.346268, -71.095764], { icon: redSoxs }).addTo(map);
     bostonTea = L.marker([42.3522, -71.0513], { icon: ship }).addTo(map);
+    wentworthOne = L.marker([42.3361703, -71.0974014,17], { icon: one }).addTo(map);
+    wentworthTwo = L.marker([42.3368404, -71.0956942,20], { icon: two}).addTo(map);
+    wentworthThree = L.marker([42.3363249, -71.0966343,18], { icon: three }).addTo(map);
 }
 
 function handleLocationError(error) {
