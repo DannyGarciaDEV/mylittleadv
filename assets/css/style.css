@@ -7,7 +7,7 @@
     width: 100%;
     /*max-width: 400px; */
     margin:0 !important;
-    padding: 10px;
+    
 }
 
 .top-section {
@@ -24,7 +24,8 @@ img.progress {
     z-index: 1000;
     position: static;
     max-width: 101px;
-    margin: 4px 39px
+    margin: 22px 41px;
+    backdrop-filter: blur(5px);
 }
 
 .bottom-section {
@@ -33,10 +34,14 @@ img.progress {
 
 /* Map styles */
 #map {
-    height: 600px; /* Adjust the map's height as needed */
-    width: 97%;
-    border: 1px solid #000; /* Add a border for clarity */
+    height: 100vh;
+    width: 100%;
+   
     border-radius: 5px;
+}
+
+body{
+    background-color: #cdc1b0;
 }
 
 /*
