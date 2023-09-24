@@ -119,6 +119,12 @@ const eleven = L.icon({
     iconAnchor: [16, 32],
     
 });
+const twelveWent = L.icon({
+    iconUrl: 'https://image-tc.galaxy.tf/wipng-6tfie5nt58nx3ut9um5ml4ppk/wentworth.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    
+});
 function getLocation() {
     if (navigator.permissions) {
         navigator.permissions.query({ name: 'geolocation' }).then(function (permissionStatus) {
@@ -177,6 +183,7 @@ function showPosition(position) {
     unionOysterH = L.marker([ 42.3614,  -71.0566], { icon: nine }).addTo(map);
     maassStateH = L.marker([  42.3595,  -71.0621], { icon: ten }).addTo(map);
     wentwothRandom = L.marker([ 42.3363878,  -71.0953774,21], { icon: eleven }).addTo(map);
+    wentwothLogo = L.marker([42.336611, -71.095019], { icon: eleven }).addTo(map);
 
 
 function handleLocationError(error) {
