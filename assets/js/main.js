@@ -103,30 +103,3 @@ function handleLocationError(error) {
 // Get location once without asking multiple times
 getLocation();
 
-const videoElement = document.getElementById('camera');
-const startButton = document.getElementById('startButton');
-const stopButton = document.getElementById('stopButton');
-
-startButton.addEventListener('click', async () => {
-    try {
-        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        videoElement.srcObject = stream;
-        startButton.style.display = 'none';
-        stopButton.style.display = 'inline';
-    } catch (error) {
-        console.error('Error accessing camera:', error);
-    }
-});
-
-stopButton.addEventListener('click', () => {
-    const stream = videoElement.srcObject;
-    const tracks = stream.getTracks();
-
-    tracks.forEach(track => {
-        track.stop();
-    });
-
-    videoElement.srcObject = null;
-    startButton.style.display = 'inline';
-    stopButton.style.display = 'none';
-});

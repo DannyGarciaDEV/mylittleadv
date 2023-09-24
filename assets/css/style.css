@@ -1,25 +1,43 @@
-#map {
-    height: 70vh; /* Set initial height, adjust as needed */
-    width: 100%;
-    margin-bottom: 20px; /* Add space below the map */
-}
-
-
-
-.venture-info img {
-    max-width: 91%;
-    height: auto;
-    max-height: 147px;
-}
+/* Common styles for all screen sizes */
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
-.video-container {
-    text-align: center;
-    margin-top: 20px;
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px; /* Add space between top and bottom sections */
+}
+
+img.avatar,
+img.progress {
+    max-width: 100px; /* Adjust the size of the avatar and progress images */
+}
+
+.bottom-section {
+    width: 100%;
+}
+
+/* Map styles */
+#map {
+    height: 600px; /* Adjust the map's height as needed */
+    width: 100%;
+    border: 1px solid #000; /* Add a border for clarity */
+    border-radius: 5px;
+}
+
+/* Media query for adjusting styles on larger screens (e.g., tablets and desktops) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px; /* Adjust the maximum width for larger screens */
+    }
 }
