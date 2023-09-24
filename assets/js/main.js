@@ -183,7 +183,7 @@ function showPosition(position) {
     unionOysterH = L.marker([ 42.3614,  -71.0566], { icon: nine }).addTo(map);
     maassStateH = L.marker([  42.3595,  -71.0621], { icon: ten }).addTo(map);
     wentwothRandom = L.marker([ 42.3363878,  -71.0953774,21], { icon: eleven }).addTo(map);
-    wentwothLogo = L.marker([42.336611, -71.095019], { icon: eleven }).addTo(map);
+    wentwothLogo = L.marker([42.336611, -71.095019], { icon: twelveWent }).addTo(map);
 
 
 function handleLocationError(error) {
