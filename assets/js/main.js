@@ -22,8 +22,8 @@ const chestIcon = L.icon({
 });
 
 const userIcon = L.icon({
-    iconUrl: 'https://media0.giphy.com/media/SsrTQfLYCpcePgAU3b/giphy.gif?cid=6c09b952xyr0iv6r3kfo01qgf95gtcvl1j1uzk9r63r88wth&ep=v1_stickers_related&rid=giphy.gif&ct=s',
-    iconSize: [32, 32],
+    iconUrl: './assets/img/default.webp',
+    iconSize: [38, 40],
     iconAnchor: [16, 32],
     popupAnchor: [0, -32],
 });
@@ -125,6 +125,26 @@ const twelveWent = L.icon({
     iconAnchor: [16, 32],
     
 });
+
+const housePin = L.icon({
+    iconUrl: 'https://static.vecteezy.com/system/resources/previews/011/577/269/non_2x/outline-drawing-house-front-elevation-view-free-png.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    
+});
+
+const thirteen = L.icon({
+    iconUrl: 'https://pngimg.com/d/treasure_chest_PNG94.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    
+});
+const fourteen = L.icon({
+    iconUrl: 'https://pngimg.com/d/treasure_chest_PNG94.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    
+});
 function getLocation() {
     if (navigator.permissions) {
         navigator.permissions.query({ name: 'geolocation' }).then(function (permissionStatus) {
@@ -169,22 +189,22 @@ function showPosition(position) {
     userMarker2 = L.marker([42.3361039, -71.094635], { icon: chestIcon }).addTo(map);
 
     eggR = L.marker([42.3360885, -71.0954584,21], { icon: egg }).addTo(map);
-    citgoSign = L.marker([42.3492582, -71.0962487], { icon: citgo }).addTo(map);
-    redSox = L.marker([42.346268, -71.095764], { icon: redSoxs }).addTo(map);
-    bostonTea = L.marker([42.3522, -71.0513], { icon: ship }).addTo(map);
+    citgoSign = L.marker([42.3492582, -71.0962487], { icon: citgo }).addTo(map).bindPopup("Citgo Sign").openPopup();
+    redSox = L.marker([42.346268, -71.095764], { icon: redSoxs }).addTo(map).bindPopup("Fenway Red Soxs").openPopup();
+    bostonTea = L.marker([42.3522, -71.0513], { icon: ship }).addTo(map).bindPopup("Boston Tea Party Ship").openPopup();
     wentworthOne = L.marker([42.3364348, -71.0952346,21], { icon: one }).addTo(map);
     wentworthTwo = L.marker([42.3368404, -71.0956942,20], { icon: two}).addTo(map);
     wentworthThree = L.marker([42.3363249, -71.0966343,18], { icon: three }).addTo(map);
     wentworthFour = L.marker([42.3368235, -71.0942226,21], { icon: four }).addTo(map);
     wentworthFiver = L.marker([42.3366479, -71.0949202,21], { icon: five }).addTo(map);
-    cityHall = L.marker([42.3602, -71.0588], { icon: six }).addTo(map);
-    paulRevereH = L.marker([42.3634, -71.0537], { icon: seven }).addTo(map);
-    northEnd = L.marker([42.3680, -71.0551], { icon: eigth }).addTo(map);
-    unionOysterH = L.marker([ 42.3614,  -71.0566], { icon: nine }).addTo(map);
-    maassStateH = L.marker([  42.3595,  -71.0621], { icon: ten }).addTo(map);
+    cityHall = L.marker([42.3602, -71.0588], { icon: six }).addTo(map).bindPopup("City Hall Boston").openPopup();
+    paulRevereH = L.marker([42.3634, -71.0537], { icon: seven }).addTo(map).bindPopup("Paul Revere House").openPopup();
+   
+    unionOysterH = L.marker([ 42.3614,  -71.0566], { icon: nine }).addTo(map).bindPopup("Union Oyster house").openPopup();
+    maassStateH = L.marker([  42.3595,  -71.0621], { icon: ten }).addTo(map).bindPopup("Mass State House").openPopup();
     wentwothRandom = L.marker([ 42.3363878,  -71.0953774,21], { icon: eleven }).addTo(map);
-    wentwothLogo = L.marker([42.336611, -71.095019], { icon: twelveWent }).addTo(map);
-
+    wentwothLogo = L.marker([42.336611, -71.095019], { icon: twelveWent }).addTo(map).bindPopup("WentWorth Institute of Technology").openPopup();
+    newburry = L.marker([42.3492844,-71.0836759,17], { icon: thirteen }).addTo(map).bindPopup("Newburry st").openPopup();
 
 function handleLocationError(error) {
     document.getElementById("location").innerHTML = "Error: " + error.message;
