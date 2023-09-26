@@ -205,7 +205,7 @@ function showPosition(position) {
     wentwothRandom = L.marker([ 42.3363878,  -71.0953774,21], { icon: eleven }).addTo(map);
     wentwothLogo = L.marker([42.336611, -71.095019], { icon: twelveWent }).addTo(map).bindPopup("WentWorth Institute of Technology").openPopup();
     newburry = L.marker([42.3492844,-71.0836759,17], { icon: thirteen }).addTo(map).bindPopup("Newburry st").openPopup();
-
+    newburry = L.marker([42.3470567,-71.0843176,17], { icon: thirteen }).addTo(map).bindPopup("Prudencial Center").openPopup();
 function handleLocationError(error) {
     document.getElementById("location").innerHTML = "Error: " + error.message;
 }
